@@ -47,7 +47,7 @@
     "@deepseek-ai/cordis": ">=4.0.0 <5"
   },
   "devDependencies": {
-    "@types/node": "^22.10.0",
+    "@types/node": "^26.6.6",
     "typescript": "^5.7.0"
   },
   "keywords": [
