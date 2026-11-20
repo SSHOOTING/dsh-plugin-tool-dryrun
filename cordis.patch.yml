@@ -1,0 +1,4 @@
+# Official bundle layer: resolves by package name so the installed copy boots.
+- insert:
+    - id: dsh-plugin-tool-dryrun
+      name: dsh-plugin-tool-dryrun

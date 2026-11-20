@@ -1,0 +1,4 @@
+# Portable overlay for local development: relative name only.
+- insert:
+    - id: dsh-plugin-tool-dryrun
+      name: './src/index.ts'

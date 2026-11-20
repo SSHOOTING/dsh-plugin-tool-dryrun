@@ -1,0 +1,74 @@
+{
+  "name": "dsh-plugin-tool-dryrun",
+  "version": "0.1.0",
+  "description": "DSH plugin: Before a write happens, see what would change, what permission it needs and whether it is reversible. Reads are marked pass-through.",
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./core": {
+      "types": "./lib/types/core.d.ts",
+      "default": "./lib/core.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/**/*.js",
+    "lib/**/*.d.ts",
+    "cordis.patch.yml",
+    "cordis.yml",
+    "README.md",
+    "README.zh.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "SECURITY.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run build && node tests/core.test.mjs && node tests/entry.test.mjs",
+    "pack:check": "npm pack --dry-run",
+    "prepack": "npm run build"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0",
+    "dsh": ">=0.2.0-rc.2 <0.3.0"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": ">=4.0.0 <5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "agent-lifecycle",
+    "tool",
+    "dry-run",
+    "permission",
+    "diff",
+    "reversible",
+    "safety"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SSHOOTING/dsh-plugin-tool-dryrun.git"
+  },
+  "homepage": "https://github.com/SSHOOTING/dsh-plugin-tool-dryrun#readme",
+  "bugs": {
+    "url": "https://github.com/SSHOOTING/dsh-plugin-tool-dryrun/issues"
+  }
+}
