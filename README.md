@@ -19,7 +19,12 @@ Requires Node `^22.19.0 || >=24` and DSH `>=0.2.0-rc.2 <0.3.0`.
 3. You get a compact, read-only report; use `/tool-dryrun --json` for machine-readable output.
 
 ```text
-[tool-dryrun] report — see --json for full data
+[tool-dryrun] 5 tool call(s) · 0 write(s) need approval
+  read_file  UNKNOWN  permission=pass-through  reversible=n/a
+  read_file  UNKNOWN  permission=pass-through  reversible=n/a
+  write_file  UNKNOWN  permission=pass-through  reversible=n/a
+  write_file  UNKNOWN  permission=pass-through  reversible=n/a
+  retry_request  UNKNOWN  permission=pass-through  reversible=n/a
 ```
 
 ## What it reads
